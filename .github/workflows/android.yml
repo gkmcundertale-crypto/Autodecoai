@@ -1,0 +1,30 @@
+
+name: Build Auto Deco AI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get source code
+        uses: actions/checkout@v4
+
+      - name: Build Android mod
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          sdk: given
+          target: Android64
+
+      - name: Upload GEODE file
+        uses: actions/upload-artifact@v4
+        with:
+          name: AutoDecoAI-Android
+          path: ${{ steps.build.outputs.build-output }}/*.geode
+          
