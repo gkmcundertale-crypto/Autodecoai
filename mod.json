@@ -1,0 +1,12 @@
+
+{
+  "geode": "v5.11.2",
+  "gd": {
+    "android": "2.2081"
+  },
+  "id": "gkmcundertale-crypto.auto-deco-ai",
+  "name": "Auto Deco AI",
+  "version": "v1.0.0",
+  "developer": "gkmcundertale-crypto",
+  "description": "AI-powered Geometry Dash decoration style transfer."
+}
